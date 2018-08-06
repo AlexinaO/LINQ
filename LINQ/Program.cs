@@ -144,6 +144,49 @@ namespace LINQ1
                 }
             
         }
+        private static void RequeteAvecGroupement2()
+        {
+            AfficherEntete();
+
+            // Syntaxe de requête
+            var requete = from ville in villes
+                          orderby ville.nom ascending
+                          group ville by ville.departement into groupe
+                          orderby groupe.Key
+                          select new
+                          {
+                              NumeroDepartement = groupe.Key,
+                              Villes = groupe.ToList() 
+                          };
+            foreach (var resultat in requete)
+            {
+                Console.WriteLine(resultat.NumeroDepartement);
+                foreach (var ville in resultat.Villes)
+                {
+                    Console.WriteLine($"-{villle.Nom} ({ville.CodePostal})");
+                }
+                Console.WriteLine("*********");
+            }
+
+            // Syntaxe de méthode
+            var requete2 = prenoms
+                .OrderBy(prenom => prenom)
+                .GroupBy(prenom => prenom[0])
+                .Select(groupe => new
+                {
+                    Lettre = groupe.Key,
+                    Prenoms = groupe.ToList()
+                });
+            foreach (var resultat in requete2)
+            {
+                Console.WriteLine(resultat.Lettre);
+                foreach (var prenom in resultat.Prenoms)
+                {
+                    Console.WriteLine($"\t{prenom}");
+                }
+            }
+
+        }
 
         private static void RequeteAvecTypeDeRetourDifferent()
         {
