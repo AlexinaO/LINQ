@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{11B126D6-DFE4-493A-BF17-FDF05A9B035C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ1", "LINQ\LINQ1.csproj", "{11B126D6-DFE4-493A-BF17-FDF05A9B035C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace LINQ1
 {
-    class Program
+    public class Departement
     {
-        static void Main(string[] args)
-        {
-
-        }
+        public string Nom { get; set; }
+        public string Numero { get; set; }
     }
 }
