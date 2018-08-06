@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ1", "LINQ\LINQ1.csproj"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoLinq1", "ExoLinq1\ExoLinq1.csproj", "{85CBB5B7-FD64-4D51-B3B6-C61148264A10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mammouth", "Mammouth\Mammouth.csproj", "{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{85CBB5B7-FD64-4D51-B3B6-C61148264A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85CBB5B7-FD64-4D51-B3B6-C61148264A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85CBB5B7-FD64-4D51-B3B6-C61148264A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
