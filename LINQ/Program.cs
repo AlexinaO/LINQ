@@ -150,8 +150,8 @@ namespace LINQ1
 
             // Syntaxe de requête
             var requete = from ville in villes
-                          orderby ville.nom ascending
-                          group ville by ville.departement into groupe
+                          orderby ville.Nom ascending
+                          group ville by ville.Departement into groupe
                           orderby groupe.Key
                           select new
                           {
@@ -163,7 +163,7 @@ namespace LINQ1
                 Console.WriteLine(resultat.NumeroDepartement);
                 foreach (var ville in resultat.Villes)
                 {
-                    Console.WriteLine($"-{villle.Nom} ({ville.CodePostal})");
+                    Console.WriteLine($"-{ville.Nom} ({ville.CodePostal})");
                 }
                 Console.WriteLine("*********");
             }
@@ -203,9 +203,32 @@ namespace LINQ1
             AfficherEntete();
 
             // Syntaxe de requête
+            var requete = from ville in villes
+                          join departement in departements
+                          on ville.Departement equals departement.Numero
+                          select new
+                          {
+                              Ville = ville.Nom,
+                              NomDepartement = departement.Nom
+                          };
+            foreach (var resultat in requete)
+            {
+                Console.WriteLine($"-{resultat.Ville} ({resultat.NomDepartement})");
+            }
+            Console.WriteLine("*********");
 
 
             // Syntaxe de méthode
+            var requete2 = villes.Join(departements, ville => ville.Departement, departement => departement.Numero, (ville, departement) => new
+            {
+                Ville = ville.Nom,
+                NomDepartement = departement.Nom
+            });
+            foreach (var resultat in requete2)
+            {
+                Console.WriteLine($"-{resultat.Ville} ({resultat.NomDepartement})");
+            }
+                
         }
 
         private static void AfficherEntete([CallerMemberName]string nomMethodeAppelant = null)
