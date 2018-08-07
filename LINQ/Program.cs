@@ -37,6 +37,11 @@ namespace LINQ1
             RequeteAvecTypeDeRetourDifferent();
             RequeteAvecJointure();
 
+            //requete exécutée et moyenne faite sur le résultat de la requete
+            var moyenne=(from numero in numeros 
+                        where numero%2==0
+                        select numero).Average();
+
             Console.ReadKey();
         }
 
