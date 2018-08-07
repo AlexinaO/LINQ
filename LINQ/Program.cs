@@ -39,6 +39,8 @@ namespace LINQ1
             RequeteAvecTypeDeRetourDifferent();
             RequeteAvecJointure();
 
+
+
             //Lire un fichier
             var cheminFichier = "villes.txt"; //le fichier sera stocké là où l'exécutable est stocké pour mettre un chemin plus complet on peut faire @"C:\Temps\villes.text"
             if (File.Exists(cheminFichier))
@@ -49,7 +51,7 @@ namespace LINQ1
                 {
                     string[] champs = ligneFichier.Split(';');
                     var ville = new Ville();
-                    ville.Nom = champs[];
+                    ville.Nom = champs[0];
                     ville.CodePostal = champs[1];
                     villesDansFichier.Add(ville);
                 }

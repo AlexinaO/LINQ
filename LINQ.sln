@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoLinq1", "ExoLinq1\ExoLin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mammouth", "Mammouth\Mammouth.csproj", "{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegues", "Delegues\Delegues.csproj", "{556DAE61-9EAD-49D6-B5B0-93D09160E542}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21B79EC6-9F1F-47CA-9F4C-D46A0E74E793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556DAE61-9EAD-49D6-B5B0-93D09160E542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556DAE61-9EAD-49D6-B5B0-93D09160E542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556DAE61-9EAD-49D6-B5B0-93D09160E542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556DAE61-9EAD-49D6-B5B0-93D09160E542}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
