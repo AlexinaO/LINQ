@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Linq;
+using System.IO;
+using System.Text;
 
 namespace LINQ1
 {
@@ -36,6 +38,34 @@ namespace LINQ1
             RequeteAvecGroupement();
             RequeteAvecTypeDeRetourDifferent();
             RequeteAvecJointure();
+
+            //Lire un fichier
+            var cheminFichier = "villes.txt"; //le fichier sera stocké là où l'exécutable est stocké pour mettre un chemin plus complet on peut faire @"C:\Temps\villes.text"
+            if (File.Exists(cheminFichier))
+            {
+                IEnumerable<string> lignesFichier = File.ReadLines(cheminFichier);
+                var villesDansFichier = new List<Ville>();
+                foreach (var ligneFichier in lignesFichier)
+                {
+                    string[] champs = ligneFichier.Split(';');
+                    var ville = new Ville();
+                    ville.Nom = champs[];
+                    ville.CodePostal = champs[1];
+                    villesDansFichier.Add(ville);
+                }
+            }
+            else
+            {
+                //Ecrire le fichier
+                var contenuFichier = new StringBuilder();
+                foreach (var ville in villes)
+                {
+                    contenuFichier.AppendLine($"{ville.Nom};{ville.CodePostal}");
+                    contenuFichier.AppendLine(string.Join(";", ville.Nom, ville.CodePostal));
+                }
+                File.WriteAllText(cheminFichier, contenuFichier.ToString());
+            }
+            Console.ReadKey();
 
             //requete exécutée et moyenne faite sur le résultat de la requete
             var moyenne=(from numero in numeros 
